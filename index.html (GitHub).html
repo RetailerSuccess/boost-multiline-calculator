@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8"><style id="qw-theme">:root {
+  --color-bg: #121218 !important;
+  --color-text: #e4e4ed !important;
+  --flow-size-overview-canvas-min-height: 480px !important;
+  --color-navbar-bg: #1a1a24 !important;
+  --color-navbar-fg: #e4e4ed !important;
+  --color-navbar-fg-muted: color-mix(in srgb, #e4e4ed 65%, #1a1a24) !important;
+  --color-navbar-divider: #ffffff1f !important;
+  --color-leftnav-bg: #1a1a24 !important;
+  --color-bg-chat-view: #121218 !important;
+  --color-bg-secondary: #1a1a24 !important;
+  --color-bg-tertiary: #1e1e2a !important;
+  --color-bg-hover: #2a2a38 !important;
+  --color-surface: #1e1e2a !important;
+  --color-surface-hover: #2a2a38 !important;
+  --color-surface-active: #353546 !important;
+  --color-border: #ffffff1f !important;
+  --color-border-light: #ffffff0f !important;
+  --color-border-strong: #3a3a4e !important;
+  --background-toggle-off-default: #fff0 !important;
+  --color-primary: #8575ff !important;
+  --color-primary-dark: #4200db !important;
+  --color-primary-light: #8575ff !important;
+  --color-primary-bg: color-mix(in srgb, #8575ff 15%, transparent) !important;
+  --color-primary-hover-border: #4200db !important;
+  --color-nav-icon-active: #8575ff !important;
+  --color-nav-hover-border: #8575ff !important;
+  --color-primary-alpha-3: color-mix(in srgb, #8575ff 3%, transparent) !important;
+  --color-primary-alpha-5: color-mix(in srgb, #8575ff 5%, transparent) !important;
+  --color-primary-alpha-8: color-mix(in srgb, #8575ff 8%, transparent) !important;
+  --color-primary-alpha-12: color-mix(in srgb, #8575ff 12%, transparent) !important;
+  --color-primary-alpha-15: color-mix(in srgb, #8575ff 15%, transparent) !important;
+  --color-primary-alpha-20: color-mix(in srgb, #8575ff 20%, transparent) !important;
+  --color-primary-alpha-25: color-mix(in srgb, #8575ff 25%, transparent) !important;
+  --color-primary-alpha-30: color-mix(in srgb, #8575ff 30%, transparent) !important;
+  --color-primary-alpha-40: color-mix(in srgb, #8575ff 40%, transparent) !important;
+  --color-primary-alpha-50: color-mix(in srgb, #8575ff 50%, transparent) !important;
+  --color-primary-alpha-60: color-mix(in srgb, #8575ff 60%, transparent) !important;
+  --color-primary-subtle: color-mix(in srgb, #8575ff 25%, transparent) !important;
+  --color-primary-border: color-mix(in srgb, #8575ff 50%, transparent) !important;
+  --color-focus-ring: #8575ff !important;
+  --color-sidebar-hover: color-mix(in srgb, #8575ff 15%, transparent) !important;
+  --color-sidebar-hover-solid: color-mix(in srgb, #8575ff 12%, #121218) !important;
+  --color-selection-copy: #3b82f64d !important;
+  --color-selection-capture: color-mix(in srgb, #8575ff 25%, transparent) !important;
+  --block-hover-outline: 1px dashed color-mix(in srgb, #8575ff 50%, transparent) !important;
+  --block-selected-outline: 1px solid #8575ff !important;
+  --block-selection-outline-offset: 2px !important;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #8575ff 40%, transparent) !important;
+  --color-accent: #8575ff !important;
+  --color-accent-foreground: #8575ff !important;
+  --color-accent-dark: #4200db !important;
+  --color-accent-light: color-mix(in srgb, #8575ff 15%, transparent) !important;
+  --color-accent-inverse: #fff !important;
+  --color-link: #8575ff !important;
+  --color-brand-ai-gradient-start: #6842ff !important;
+  --color-brand-ai-gradient-mid: #d600ba !important;
+  --color-brand-ai-gradient-end: #ff4b14 !important;
+  --color-primary-gradient-end: color-mix(in srgb, #8575ff 35%, transparent) !important;
+  --color-primary-bg-solid: #1a1530 !important;
+  --color-user-bubble: #333843 !important;
+  --color-user-bubble-text: #e4e4ed !important;
+  --color-text-secondary: #a0a0b4 !important;
+  --color-text-tertiary: #8a8a9a !important;
+  --color-text-muted: #6e6e82 !important;
+  --color-text-on-primary: #fff !important;
+  --color-success: #4ade80 !important;
+  --color-success-dark: #00802f !important;
+  --color-success-light: #d9ffd6 !important;
+  --color-success-hover: #005c26 !important;
+  --color-success-bg: #1c2c22 !important;
+  --color-success-border: #0e3d1c !important;
+  --color-success-foreground: #4ade80 !important;
+  --color-success-dark-foreground: #00802f !important;
+  --color-success-text: #4ade80 !important;
+  --color-error: #ff6b6b !important;
+  --color-error-dark: #db0000 !important;
+  --color-error-light: #ffe0e0 !important;
+  --color-error-hover: #3b1a24 !important;
+  --color-error-bg: #3b1a24 !important;
+  --color-error-border: #5e1a24 !important;
+  --color-error-active-border: #db0000 !important;
+  --color-error-foreground: #ff6b6b !important;
+  --color-error-dark-foreground: #db0000 !important;
+  --color-error-inverse: #fff !important;
+  --color-error-text: #ff6b6b !important;
+  --color-warning: #fbbf24 !important;
+  --color-warning-dark: #573a00 !important;
+  --color-warning-light: #fffbbd !important;
+  --color-warning-hover: #db9200 !important;
+  --color-warning-bg: #3d3520 !important;
+  --color-warning-border: #5e4a1a !important;
+  --color-warning-foreground: #fbbf24 !important;
+  --color-warning-dark-foreground: #573a00 !important;
+  --color-warning-inverse: #573a00 !important;
+  --color-surface-warning: #fffbbd !important;
+  --color-text-warning: #573a00 !important;
+  --color-info: #60a5fa !important;
+  --color-info-dark: #006ce0 !important;
+  --color-info-light: #d1f1ff !important;
+  --color-info-hover: #003b8f !important;
+  --color-info-bg: #1a2a42 !important;
+  --color-info-border: #0f3d6e !important;
+  --color-info-foreground: #60a5fa !important;
+  --color-info-dark-foreground: #002a66 !important;
+  --color-info-inverse: #fff !important;
+  --color-overlay: #000000b3 !important;
+  --color-shadow: #0000004d !important;
+  --color-hover: #ffffff0d !important;
+  --color-tooltip-bg: #1e1e2af2 !important;
+  --color-tooltip-text: #e4e4ed !important;
+  --color-voice-purple: #8575ff !important;
+  --color-voice-purple-dark: #4200db !important;
+  --color-voice-purple-light: #8575ff !important;
+  --color-voice-red: #ff6b6b !important;
+  --color-voice-red-dark: #db0000 !important;
+  --color-voice-amber: #fbbf24 !important;
+  --color-voice-purple-glow: #8575ff66 !important;
+  --color-voice-red-glow: #db000066 !important;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace !important;
+  --text-2xs: .5625rem !important;
+  --text-xs: .625rem !important;
+  --text-sm: .6875rem !important;
+  --text-base: .75rem !important;
+  --text-md: .8125rem !important;
+  --text-lg: .875rem !important;
+  --text-xl: 1rem !important;
+  --text-2xl: 1.125rem !important;
+  --text-3xl: 1.25rem !important;
+  --text-4xl: 1.5rem !important;
+  --text-5xl: 2rem !important;
+  --spacing-1: calc(.25rem * 1) !important;
+  --spacing-1-5: calc(.25rem * 1.5) !important;
+  --spacing-2: calc(.25rem * 2) !important;
+  --spacing-3: calc(.25rem * 3) !important;
+  --spacing-4: calc(.25rem * 4) !important;
+  --spacing-5: calc(.25rem * 5) !important;
+  --spacing-6: calc(.25rem * 6) !important;
+  --spacing-7: calc(.25rem * 7) !important;
+  --spacing-8: calc(.25rem * 8) !important;
+  --spacing-9: calc(.25rem * 9) !important;
+  --spacing-10: calc(.25rem * 10) !important;
+  --border-radius-rounded-lg: 8px !important;
+  --radius-sm: 6px !important;
+  --radius-md: 10px !important;
+  --radius-card: 12px !important;
+  --radius-lg: 16px !important;
+  --radius-pill: 8px !important;
+  --shadow-sm: 0 1px 2px #0003 !important;
+  --shadow-md: 0 4px 12px #0000004d !important;
+  --shadow-lg: 0 4px 16px 4px #0006, 0 2px 6px 1px #0006 !important;
+  --color-success-bg-solid: #1a3d28 !important;
+  --color-error-bg-solid: #4a2028 !important;
+  --color-error-border-solid: #5e1a24 !important;
+  --color-warning-bg-solid: #4a3a1e !important;
+  --color-warning-text: #fbbf24 !important;
+  --color-info-bg-solid: #1a3050 !important;
+  --color-info-bg-solid-alt: #222240 !important;
+  --color-info-text: #60a5fa !important;
+  --color-info-text-alt: #818cf8 !important;
+  --color-emerald: #34d399 !important;
+  --color-teal: #5eead4 !important;
+  --color-code-bg: #1e1e2a !important;
+  --color-code-header-bg: #252535 !important;
+  --color-code-text: #e4e4ed !important;
+  --color-code-border: #2e2e3e !important;
+  --color-code-muted: #6e6e82 !important;
+  --color-inline-code-bg: #1e1e2a !important;
+  --color-inline-code-text: #e4e4ed !important;
+  --color-inline-code-border: #2e2e3e !important;
+  --color-scrollbar-thumb: #3a3a4e !important;
+  --color-scrollbar-track: transparent !important;
+  --color-graph-node-text: #e4e4ed !important;
+  --color-graph-node-text-dim: #6e6e82 !important;
+  --color-graph-edge-default: #6e6e82 !important;
+  --color-graph-edge-cross: #f39c12 !important;
+  --color-graph-edge-text: #a0a0b4 !important;
+  --color-graph-edge-stroke: #1a1a24 !important;
+  --color-graph-highlight-bg: #ff6b6b !important;
+  --color-graph-highlight-border: #e74c3c !important;
+  --color-graph-search-bg: gold !important;
+  --color-graph-search-border: orange !important;
+  --color-graph-focus-border: #f44 !important;
+  --color-graph-external-border: #6e6e82 !important;
+  --color-graph-selected-border: #8575ff !important;
+  --qs-data-cat-01: #6366f1 !important;
+  --qs-data-cat-02: #f59e0b !important;
+  --qs-data-cat-03: #06b6d4 !important;
+  --qs-data-cat-04: #a78bfa !important;
+  --qs-data-cat-05: #22c55e !important;
+  --qs-data-cat-06: #0284c7 !important;
+  --qs-data-cat-07: #e879f9 !important;
+  --qs-data-cat-08: #a3e635 !important;
+  --qs-data-cat-09: #60a5fa !important;
+  --qs-data-cat-10: #f9a8d4 !important;
+  --qs-data-cat-11: #f97316 !important;
+  --qs-data-cat-12: #5eead4 !important;
+  --qs-data-cat-other: #a3a3a3 !important;
+  --color-graph-cat-person: #6366f1 !important;
+  --color-graph-cat-module: #6366f1 !important;
+  --color-graph-cat-organization: #f59e0b !important;
+  --color-graph-cat-org: #f59e0b !important;
+  --color-graph-cat-variable: #f59e0b !important;
+  --color-graph-cat-column: #f59e0b !important;
+  --color-graph-cat-project: #06b6d4 !important;
+  --color-graph-cat-sheet: #06b6d4 !important;
+  --color-graph-cat-url: #06b6d4 !important;
+  --color-graph-cat-product: #a78bfa !important;
+  --color-graph-cat-class: #a78bfa !important;
+  --color-graph-cat-dashboard: #a78bfa !important;
+  --color-graph-cat-place: #22c55e !important;
+  --color-graph-cat-location: #22c55e !important;
+  --color-graph-cat-function: #22c55e !important;
+  --color-graph-cat-event: #0284c7 !important;
+  --color-graph-cat-date: #0284c7 !important;
+  --color-graph-cat-service: #0284c7 !important;
+  --color-graph-cat-creativework: #e879f9 !important;
+  --color-graph-cat-doc: #e879f9 !important;
+  --color-graph-cat-message: #a3e635 !important;
+  --color-graph-cat-channel: #a3e635 !important;
+  --color-graph-cat-email: #a3e635 !important;
+  --color-graph-cat-visual: #a3e635 !important;
+  --color-graph-cat-file: #60a5fa !important;
+  --color-graph-cat-file-aggregate: #60a5fa !important;
+  --color-graph-cat-code: #60a5fa !important;
+  --color-graph-cat-decision: #f9a8d4 !important;
+  --color-graph-cat-action: #f9a8d4 !important;
+  --color-graph-cat-observation: #f9a8d4 !important;
+  --color-graph-cat-metric: #f9a8d4 !important;
+  --color-graph-cat-topic: #f97316 !important;
+  --color-graph-cat-concept: #f97316 !important;
+  --color-graph-cat-definedterm: #f97316 !important;
+  --color-graph-cat-instruction: #f97316 !important;
+  --color-graph-cat-import: #f97316 !important;
+  --color-graph-cat-dataset: #5eead4 !important;
+  --color-graph-cat-occupation: #5eead4 !important;
+  --color-graph-cat-method: #5eead4 !important;
+  --color-graph-cat-folder: #a3a3a3 !important;
+  --color-graph-cat-unknown: #a3a3a3 !important;
+  --color-graph-rel-contains: #d5dbdb !important;
+  --color-graph-rel-extends: #bb8fce !important;
+  --color-graph-rel-implements: #5dade2 !important;
+  --color-graph-rel-imports: #eb984e !important;
+  --color-graph-rel-uses: #58d68d !important;
+  --color-graph-rel-calls: #52be80 !important;
+  --color-graph-rel-references: #f5b041 !important;
+  --color-graph-rel-related-to: #aab7b8 !important;
+  --color-graph-rel-works-on: #ec7063 !important;
+  --color-graph-rel-owns: #48c9b0 !important;
+  --color-graph-rel-depends-on: #eb984e !important;
+  --color-graph-rel-parent-of: #d5dbdb !important;
+  --qs-content: #06080b !important;
+  --qs-main: #06080b !important;
+  --qs-primary-foreground: #f9f9fb !important;
+  --qs-secondary-foreground: #b4b4bb !important;
+  --qs-tertiary-foreground: #6e6e82 !important;
+  --qs-placeholder-foreground: #b4b4bb !important;
+  --qs-divider: #333843 !important;
+  --qs-default-border: #8c8c94 !important;
+  --qs-neutral-soft: #656871 !important;
+  --qs-neutral-gray-50: #1e1e2a !important;
+  --qs-tertiary-background: #1e1e2a !important;
+  --qs-action-hover: #1b232d !important;
+  --qs-primary-default: #8575ff !important;
+  --qs-primary-dark: #d2ccff !important;
+  --qs-primary-light: #1b0051 !important;
+  --qs-success-default: #2bb534 !important;
+  --qs-error-default: #ff7a7a !important;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif !important;
+  --mc-status-needs-input-bg: #fffbbd !important;
+  --mc-status-needs-input-fg: #573a00 !important;
+  --mc-status-error-bg: #ffe0e0 !important;
+  --mc-status-error-fg: #700000 !important;
+  --mc-status-running-bg: #d1f1ff !important;
+  --mc-status-running-fg: #002a66 !important;
+  --mc-badge-success-bg: #aeffa8 !important;
+  --mc-badge-success-fg: #00471e !important;
+  --mc-badge-warning-bg: #ffed4d !important;
+  --mc-badge-warning-fg: #573a00 !important;
+  --mc-schedule-tile-border: #1a0015 !important;
+  --mc-schedule-tile-bg: color-mix(in srgb, #1a0015 28%, #1a1a24) !important;
+  --safe-top: 0px !important;
+  --safe-bottom: 0px !important;
+  --safe-left: 0px !important;
+  --safe-right: 0px !important;
+  --qs-action-active: #1b0051 !important;
+  --qs-action-disabled: #1b232d !important;
+  --qs-active-border: #8575ff !important;
+  --qs-application-navbar: #8575ff !important;
+  --qs-application-navbar-dark: #d2ccff !important;
+  --qs-application-navbar-foreground: #06080b !important;
+  --qs-application-navbar-light: #1b0051 !important;
+  --qs-automation-dark: #ffccf8 !important;
+  --qs-automation-default: #ff57e9 !important;
+  --qs-automation-light: #1a0015 !important;
+  --qs-automation-medium: #d600ba !important;
+  --qs-automation-soft: #660052 !important;
+  --qs-avatar-blue-bg: #000e23 !important;
+  --qs-avatar-blue-fg: #b8e7ff !important;
+  --qs-avatar-fuchsia-bg: #19001d !important;
+  --qs-avatar-fuchsia-fg: #f8c7ff !important;
+  --qs-avatar-green-bg: #001708 !important;
+  --qs-avatar-green-fg: #aeffa8 !important;
+  --qs-avatar-neutral-bg: #333843 !important;
+  --qs-avatar-neutral-fg: #f9f9fb !important;
+  --qs-avatar-orange-bg: #2b0a00 !important;
+  --qs-avatar-orange-fg: #ffc0ad !important;
+  --qs-avatar-pink-bg: #1a0015 !important;
+  --qs-avatar-pink-fg: #ffccf8 !important;
+  --qs-avatar-primary-bg: #1b0051 !important;
+  --qs-avatar-primary-fg: #d2ccff !important;
+  --qs-avatar-red-bg: #370000 !important;
+  --qs-avatar-red-fg: #ffe0e0 !important;
+  --qs-avatar-violet-bg: #180030 !important;
+  --qs-avatar-violet-fg: #e8d1ff !important;
+  --qs-avatar-yellow-bg: #271a00 !important;
+  --qs-avatar-yellow-fg: #fffbbd !important;
+  --qs-brand: #06080b !important;
+  --qs-brand-foreground: #f9f9fb !important;
+  --qs-brand-navbar: #f9f9fb !important;
+  --qs-brand-navbar-dark: #fff !important;
+  --qs-brand-navbar-foreground: #06080b !important;
+  --qs-brand-navbar-light: #333843 !important;
+  --qs-coachmark: #42b4ff !important;
+  --qs-connection-dark: #ffc0ad !important;
+  --qs-connection-default: #ff6a3d !important;
+  --qs-connection-light: #2b0a00 !important;
+  --qs-connection-soft: #661800 !important;
+  --qs-content-inverse: #dedee3 !important;
+  --qs-content-inverse-active: #f9f9fb !important;
+  --qs-contrast-foreground: #f9f9fb !important;
+  --qs-default-badge: #656871 !important;
+  --qs-default-badge-dot: #b4b4bb !important;
+  --qs-dimension: #8575ff !important;
+  --qs-dimension-experimental: #8575ff !important;
+  --qs-dimension-experimental-foreground: #8575ff !important;
+  --qs-dimension-foreground: #06080b !important;
+  --qs-disabled: #8c8c94 !important;
+  --qs-disabled-border: #333843 !important;
+  --qs-disabled-foreground: #656871 !important;
+  --qs-divider-light: #1b232d !important;
+  --qs-error-active-border: #ff7a7a !important;
+  --qs-error-border: #370000 !important;
+  --qs-error-dark: #ffe0e0 !important;
+  --qs-error-foreground: #ff7a7a !important;
+  --qs-error-inverse: #06080b !important;
+  --qs-error-light: #370000 !important;
+  --qs-error-medium: #ff9e9e !important;
+  --qs-error-soft: #700000 !important;
+  --qs-focus-offset: 1px !important;
+  --qs-font-base-letter-spacing: .15px !important;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif !important;
+  --qs-grid-gap: 16px !important;
+  --qs-grid-gap-xl: 24px !important;
+  --qs-hero-banner-button-hover: color-mix(in srgb, #06080b, transparent 60%) !important;
+  --qs-hover-border: #dedee3 !important;
+  --qs-info-dark: #b8e7ff !important;
+  --qs-info-default: #42b4ff !important;
+  --qs-info-inverse: #06080b !important;
+  --qs-info-light: #000e23 !important;
+  --qs-info-medium: #75cfff !important;
+  --qs-info-soft: #002a66 !important;
+  --qs-insight-dark: #f8c7ff !important;
+  --qs-insight-default: #ec70ff !important;
+  --qs-insight-light: #19001d !important;
+  --qs-insight-soft: #590066 !important;
+  --qs-main-foreground: #f9f9fb !important;
+  --qs-main-secondary-foreground: #b4b4bb !important;
+  --qs-measure: #2bb534 !important;
+  --qs-measure-experimental: #ffe347 !important;
+  --qs-measure-experimental-foreground: #ffe347 !important;
+  --qs-measure-foreground: #06080b !important;
+  --qs-neutral-black: #fff !important;
+  --qs-neutral-dark: #dedee3 !important;
+  --qs-neutral-deep: #b4b4bb !important;
+  --qs-neutral-default: #333843 !important;
+  --qs-neutral-light: #1b232d !important;
+  --qs-neutral-lightest: #131920 !important;
+  --qs-neutral-medium: #8c8c94 !important;
+  --qs-neutral-strong: #f9f9fb !important;
+  --qs-neutral-white: #06080b !important;
+  --qs-overlay: color-mix(in srgb, #f9f9fb, transparent 50%) !important;
+  --qs-primary-inverse: #06080b !important;
+  --qs-primary-inverse-foreground: #06080b !important;
+  --qs-primary-medium: #b2a8ff !important;
+  --qs-primary-soft: #35009e !important;
+  --qs-secondary: #333843 !important;
+  --qs-secondary-dark: #656871 !important;
+  --qs-secondary-light: #1b232d !important;
+  --qs-spice: #ff9800 !important;
+  --qs-success-dark: #aeffa8 !important;
+  --qs-success-inverse: #06080b !important;
+  --qs-success-light: #001708 !important;
+  --qs-success-medium: #62ff57 !important;
+  --qs-success-soft: #00471e !important;
+  --qs-tag-default: #333843 !important;
+  --qs-tag-soft-border: #656871 !important;
+  --qs-toggle-tile-lg: calc(.25rem * 15) !important;
+  --qs-toggle-tile-md: calc(.25rem * 12) !important;
+  --qs-toggle-tile-sm: calc(.25rem * 8) !important;
+  --qs-transparent: transparent !important;
+  --qs-visualization-dark: #e8d1ff !important;
+  --qs-visualization-default: #bf80ff !important;
+  --qs-visualization-light: #180030 !important;
+  --qs-visualization-soft: #45008a !important;
+  --qs-warning-dark: #fffbbd !important;
+  --qs-warning-default: #ffe347 !important;
+  --qs-warning-experimental: #ffe347 !important;
+  --qs-warning-experimental-light: #271a00 !important;
+  --qs-warning-experimental-light-foreground: #271a00 !important;
+  --qs-warning-inverse: #fffbbd !important;
+  --qs-warning-light: #271a00 !important;
+  --qs-warning-medium: #fef571 !important;
+  --qs-warning-soft: #855900 !important;
+  --qs-width-modal-lg: 1136px !important;
+  --qs-width-modal-md: 600px !important;
+  --qs-width-modal-sm: 384px !important;
+  --qs-duration-reorder: .125s !important;
+  --qs-ease-reorder: ease-in-out !important;
+  --react-pdf-text-layer: 1 !important;
+  --highlight-bg-color: #b400aa !important;
+  --highlight-selected-bg-color: #006400 !important;
+  --react-pdf-annotation-layer: 1 !important;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>") !important;
+  --input-focus-border-color: Highlight !important;
+  --input-focus-outline: 1px solid Canvas !important;
+  --input-unfocused-border-color: transparent !important;
+  --input-disabled-border-color: transparent !important;
+  --input-hover-border-color: black !important;
+  --link-outline: none !important;
+}</style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boost Multi-Line Calculator</title>
+  <meta name="description" content="Estimate your monthly Boost Mobile bill across multiple lines, plans, and connected devices.">
+  <style>
+    :root {
+      --boost-orange: #f76500;
+      --boost-dark: #121212;
+      --boost-gray-bg: #f5f6f8;
+      --boost-card-border: #e2e8f0;
+      --boost-text-muted: #64748b;
+      --boost-text-dark: #1e293b;
+      --boost-green: #10b981;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: var(--boost-gray-bg);
+      color: var(--boost-text-dark);
+      padding: 24px 16px;
+    }
+
+    .container { max-width: 1040px; margin: 0 auto; }
+
+    header { text-align: center; margin-bottom: 24px; }
+
+    h1 {
+      color: var(--boost-dark);
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    h1 span { color: var(--boost-orange); }
+
+    .autopay-banner {
+      display: inline-block;
+      margin-top: 10px;
+      background-color: #fff4ec;
+      color: #b84a00; /* darker orange for readable contrast on light bg */
+      border: 1px solid #ffd8bf;
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    .calculator-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    @media (min-width: 860px) {
+      .calculator-grid {
+        grid-template-columns: 1.35fr 1fr;
+        align-items: start;
+      }
+    }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid var(--boost-card-border);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      margin-bottom: 20px;
+    }
+
+    .card-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* Lines List */
+    .line-row {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 12px;
+      background: #fafafa;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      margin-bottom: 12px;
+    }
+
+    .line-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .line-label { font-weight: 700; font-size: 0.95rem; }
+
+    .btn-delete {
+      background: none;
+      border: none;
+      color: #dc2626;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .btn-delete:hover { text-decoration: underline; }
+
+    select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #cbd5e1;
+      font-size: 0.95rem;
+      background-color: #ffffff;
+    }
+
+    select:focus-visible,
+    button:focus-visible,
+    input:focus-visible {
+      outline: 2px solid var(--boost-orange);
+      outline-offset: 2px;
+    }
+
+    .plan-desc-snippet {
+      font-size: 0.8rem;
+      color: var(--boost-text-muted);
+      line-height: 1.4;
+      padding-top: 4px;
+    }
+
+    .badge-eligible { color: #047857; font-weight: 600; }
+
+    /* Actions */
+    .button-group { display: flex; gap: 10px; margin-top: 10px; }
+
+    .btn {
+      flex: 1;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-align: center;
+      border: none;
+      transition: all 0.2s;
+    }
+
+    .btn-primary { background-color: var(--boost-orange); color: #ffffff; }
+    .btn-primary:hover:not(:disabled) { background-color: #df5800; }
+    .btn-primary:disabled { background-color: #fed7aa; cursor: not-allowed; }
+
+    .btn-secondary { background-color: #f1f5f9; color: #475569; }
+    .btn-secondary:hover { background-color: #e2e8f0; }
+
+    /* Promo toggle */
+    .promo-toggle {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      margin-top: 14px;
+      padding: 12px;
+      background: #fff8f2;
+      border: 1px dashed #ffc9a3;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      line-height: 1.4;
+      cursor: pointer;
+    }
+
+    .promo-toggle input {
+      margin-top: 2px;
+      width: 16px;
+      height: 16px;
+      accent-color: var(--boost-orange);
+      flex-shrink: 0;
+    }
+
+    .promo-toggle small { display: block; color: var(--boost-text-muted); }
+
+    /* Connected Devices Controls */
+    .device-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid #f1f5f9;
+    }
+
+    .device-row:last-child { border-bottom: none; padding-bottom: 0; }
+
+    .device-info h4 { font-size: 0.95rem; font-weight: 700; }
+    .device-info p { font-size: 0.8rem; color: var(--boost-text-muted); line-height: 1.4; }
+    .device-info .reg-price { text-decoration: line-through; }
+
+    .stepper { display: flex; align-items: center; gap: 8px; }
+
+    .stepper-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 1px solid #cbd5e1;
+      background: white;
+      font-weight: bold;
+      font-size: 1.1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .stepper-btn:hover:not(:disabled) { background-color: #f8fafc; border-color: var(--boost-orange); }
+    .stepper-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+    .stepper-value { width: 24px; text-align: center; font-weight: 700; }
+
+    /* Summary Card (Sticky) */
+    .summary-card {
+      position: sticky;
+      top: 20px;
+      background: #111111;
+      color: #ffffff;
+      border-radius: 12px;
+      padding: 24px;
+    }
+
+    .summary-header {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #9ca3af;
+      margin-bottom: 8px;
+    }
+
+    .big-total {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+
+    .big-total span { font-size: 1.1rem; font-weight: 400; color: #9ca3af; }
+
+    .avg-cost {
+      font-size: 0.9rem;
+      color: var(--boost-orange);
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .avg-sub {
+      font-size: 0.8rem;
+      color: #9ca3af;
+      margin-bottom: 20px;
+    }
+
+    .promo-callout {
+      display: none;
+      background: #1f1f1f;
+      border: 1px solid #3a2a1f;
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin-bottom: 16px;
+      font-size: 0.85rem;
+      line-height: 1.4;
+    }
+
+    .promo-callout strong { color: var(--boost-orange); font-size: 1.05rem; }
+
+    .summary-details {
+      border-top: 1px solid #262626;
+      border-bottom: 1px solid #262626;
+      padding: 16px 0;
+      margin-bottom: 16px;
+      font-size: 0.9rem;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .summary-line { display: flex; justify-content: space-between; gap: 12px; }
+    .summary-line.savings { color: #34d399; font-weight: 600; }
+
+    .disclaimer-box { font-size: 0.75rem; color: #9ca3af; line-height: 1.4; }
+
+    /* Plan Details Accordion / Guide */
+    details {
+      background: white;
+      border-radius: 8px;
+      border: 1px solid var(--boost-card-border);
+      padding: 12px;
+      margin-top: 12px;
+      font-size: 0.85rem;
+    }
+
+    summary { font-weight: 700; cursor: pointer; color: #b84a00; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      font-size: 0.8rem;
+    }
+
+    th, td { border: 1px solid #e2e8f0; padding: 6px 10px; text-align: left; }
+    th { background: #f8fafc; }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Boost <span>Multi-Line Calculator</span></h1>
+      <div class="autopay-banner">All prices include AutoPay</div>
+    </header>
+
+    <div class="calculator-grid">
+      <!-- LEFT COLUMN: LINES & DEVICES -->
+      <div class="config-col">
+        <!-- Phone Lines Card -->
+        <section class="card" aria-labelledby="linesHeading">
+          <div class="card-title">
+            <h2 id="linesHeading" style="font-size: inherit;">Phone Lines</h2>
+            <span id="lineCountBadge" style="font-size: 0.85rem; color: var(--boost-text-muted);">1 of 10 Lines</span>
+          </div>
+
+          <div id="linesContainer"></div>
+
+          <div class="button-group">
+            <button type="button" class="btn btn-primary" id="btnAddLine">+ Add Line</button>
+            <button type="button" class="btn btn-secondary" id="btnReset">Reset</button>
+          </div>
+
+          <label class="promo-toggle" for="promoToggle">
+            <input type="checkbox" id="promoToggle">
+            <span>
+              <strong>New customer?</strong> Apply the $25 Unlimited intro price ($10/mo for the first 6 months).
+              <small>Applies to up to 3 lines on the $25 Unlimited plan. Price returns to $25/mo after month 6.</small>
+            </span>
+          </label>
+        </section>
+
+        <!-- Connected Devices Card -->
+        <section class="card" aria-labelledby="devicesHeading">
+          <div class="card-title">
+            <h2 id="devicesHeading" style="font-size: inherit;">Connected Devices</h2>
+          </div>
+
+          <div class="device-row">
+            <div class="device-info">
+              <h4 id="tabletLabel">Tablet (30GB Data) — $20/mo</h4>
+              <p>30GB Premium Data • $20/mo with an active phone line (<span class="reg-price">reg. $65/mo</span>, you save $45/mo)</p>
+            </div>
+            <div class="stepper" role="group" aria-labelledby="tabletLabel">
+              <button type="button" class="stepper-btn" id="tabletMinus" aria-label="Remove one tablet" onclick="updateDevice('tablet', -1)">−</button>
+              <span class="stepper-value" id="tabletQty" aria-live="polite" aria-label="Tablets">0</span>
+              <button type="button" class="stepper-btn" aria-label="Add one tablet" onclick="updateDevice('tablet', 1)">+</button>
+            </div>
+          </div>
+
+          <div class="device-row">
+            <div class="device-info">
+              <h4 id="watchLabel">Watch (2GB) — $10/mo</h4>
+              <p>Unlimited Talk &amp; Text + 2GB Data • $10/mo with an active phone line (<span class="reg-price">reg. $25/mo</span>, you save $15/mo)</p>
+            </div>
+            <div class="stepper" role="group" aria-labelledby="watchLabel">
+              <button type="button" class="stepper-btn" id="watchMinus" aria-label="Remove one watch" onclick="updateDevice('watch', -1)">−</button>
+              <span class="stepper-value" id="watchQty" aria-live="polite" aria-label="Watches">0</span>
+              <button type="button" class="stepper-btn" aria-label="Add one watch" onclick="updateDevice('watch', 1)">+</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Plan Specifications Reference -->
+        <details>
+          <summary>View Plan Details &amp; Multi-Line Rules</summary>
+          <div style="margin-top: 10px; line-height: 1.5;">
+            <p><strong>$25 Unlimited:</strong> Unlimited talk, text &amp; 30GB high-speed data (speeds slowed to 512kbps thereafter). <em>Promo: $10 for first 6 months for new customers (limit 3 lines), then $25 forever. Non-AutoPay: $30/mo. Not eligible for multi-line discount.</em></p><br>
+            <p><strong>$40 Global Connection:</strong> Unlimited talk, text &amp; 40GB high-speed data (slowed to 512kbps thereafter). <em>Non-AutoPay: $45/mo. Not eligible for multi-line discount.</em></p><br>
+            <p><strong>$50 Unlimited+:</strong> Unlimited talk, text &amp; 40GB high-speed data. Special deals on select devices. <em>Eligible for multi-line savings. Non-AutoPay: $55/mo.</em></p><br>
+            <p><strong>$60 Unlimited Premium:</strong> Unlimited talk, text &amp; 50GB high-speed data. Special deals on select devices. <em>Eligible for multi-line savings. Non-AutoPay: $65/mo.</em></p>
+
+            <h4 style="margin-top: 14px;">Multi-Line Savings Schedule ($50 &amp; $60 Plans Only):</h4>
+            <table>
+              <thead>
+                <tr><th scope="col">Eligible Lines</th><th scope="col">Account Savings</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>1 Line</td><td>$0/mo</td></tr>
+                <tr><td>2 Lines</td><td>-$20/mo</td></tr>
+                <tr><td>3 Lines</td><td>-$40/mo</td></tr>
+                <tr><td>4 Lines</td><td>-$80/mo</td></tr>
+                <tr><td>5 Lines</td><td>-$100/mo</td></tr>
+                <tr><td>6 Lines</td><td>-$120/mo</td></tr>
+                <tr><td>7 Lines</td><td>-$140/mo</td></tr>
+                <tr><td>8 Lines</td><td>-$160/mo</td></tr>
+                <tr><td>9 Lines</td><td>-$180/mo</td></tr>
+                <tr><td>10 Lines</td><td>-$200/mo</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+      </div>
+
+      <!-- RIGHT COLUMN: SUMMARY -->
+      <aside class="summary-col" aria-label="Price summary">
+        <div class="summary-card">
+          <div class="summary-header">Estimated Monthly Total</div>
+          <div class="big-total" id="monthlyTotalDisplay" aria-live="polite">$25.00<span>/mo</span></div>
+          <div class="avg-cost" id="avgCostDisplay">Average: $25.00/phone line</div>
+          <div class="avg-sub" id="avgSubDisplay">Phone service only, before connected devices</div>
+
+          <div class="promo-callout" id="promoCallout" aria-live="polite">
+            First 6 months: <strong id="promoTotalDisplay">$10.00/mo</strong><br>
+            <span id="promoNoteDisplay" style="color:#9ca3af;">Then the total above from month 7.</span>
+          </div>
+
+          <div class="summary-details">
+            <div class="summary-line">
+              <span>Phone Lines Subtotal (<span id="totalLinesCount">1</span>):</span>
+              <span id="phoneSubtotalDisplay">$25.00</span>
+            </div>
+            <div class="summary-line">
+              <span>Eligible ($50/$60) Lines:</span>
+              <span id="eligibleCountDisplay">0</span>
+            </div>
+            <div class="summary-line savings">
+              <span>Multi-Line Savings:</span>
+              <span id="discountDisplay">-$0.00</span>
+            </div>
+            <div class="summary-line" id="deviceSubtotalRow" style="display: none;">
+              <span>Connected Devices:</span>
+              <span id="deviceSubtotalDisplay">$0.00</span>
+            </div>
+          </div>
+
+          <div class="disclaimer-box">
+            All prices include AutoPay. Service estimate only. Taxes, regulatory fees, device financing, insurance, and one-time activation fees are not included. Multi-line savings apply only to $50 Unlimited+ and $60 Unlimited Premium lines on the same account. The $10/mo intro price applies to new customers on up to 3 $25 Unlimited lines for the first 6 months only.
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <script>
+    const PLANS = {
+      unlimited25: {
+        name: "Unlimited ($25/mo)",
+        price: 25,
+        promoPrice: 10, // new customers, first 6 months
+        eligible: false,
+        desc: "30GB High-Speed Data (512kbps thereafter) • AutoPay included (+$5 without)"
+      },
+      global40: {
+        name: "Global Connection ($40/mo)",
+        price: 40,
+        eligible: false,
+        desc: "40GB High-Speed Data (512kbps thereafter) • AutoPay included (+$5 without)"
+      },
+      unlimitedPlus50: {
+        name: "Unlimited+ ($50/mo)",
+        price: 50,
+        eligible: true,
+        desc: "40GB High-Speed Data • Eligible for Multi-Line savings • Deals on select devices"
+      },
+      unlimitedPrem60: {
+        name: "Unlimited Premium ($60/mo)",
+        price: 60,
+        eligible: true,
+        desc: "50GB High-Speed Data • Eligible for Multi-Line savings • Deals on select devices"
+      }
+    };
+
+    const DEVICE_PRICES = { tablet: 20, watch: 10 };
+
+    // Cumulative account savings by number of eligible ($50/$60) lines, index 0–10.
+    // 2nd line: -$20, 3rd: -$20, 4th: -$40, 5th–10th: -$20 each.
+    // NOTE: the 4th-line step ($40) is intentional per the published schedule — confirm against current Boost offer.
+    const MULTILINE_DISCOUNTS = [0, 0, 20, 40, 80, 100, 120, 140, 160, 180, 200];
+
+    const MAX_LINES = 10;
+    const PROMO_LINE_LIMIT = 3; // $10 intro price is limited to 3 lines per account
+    const money = n => `$${n.toFixed(2)}`;
+
+    let lines = ["unlimited25"];
+    let tabletQty = 0;
+    let watchQty = 0;
+
+    function renderLines() {
+      const container = document.getElementById("linesContainer");
+      container.innerHTML = "";
+
+      lines.forEach((currentPlanKey, index) => {
+        const row = document.createElement("div");
+        row.className = "line-row";
+
+        const plan = PLANS[currentPlanKey];
+        const canDelete = lines.length > 1;
+        const selectId = `planSelect${index}`;
+
+        row.innerHTML = `
+          <div class="line-header">
+            <label class="line-label" for="${selectId}">Line ${index + 1}</label>
+            ${canDelete ? `<button type="button" class="btn-delete" aria-label="Remove line ${index + 1}" onclick="removeLine(${index})">Remove</button>` : ""}
+          </div>
+          <select id="${selectId}" onchange="changePlan(${index}, this.value)">
+            <option value="unlimited25" ${currentPlanKey === "unlimited25" ? "selected" : ""}>$25 Unlimited Plan</option>
+            <option value="global40" ${currentPlanKey === "global40" ? "selected" : ""}>$40 Global Connection Plan</option>
+            <option value="unlimitedPlus50" ${currentPlanKey === "unlimitedPlus50" ? "selected" : ""}>$50 Unlimited+ Plan (Discount Eligible)</option>
+            <option value="unlimitedPrem60" ${currentPlanKey === "unlimitedPrem60" ? "selected" : ""}>$60 Unlimited Premium (Discount Eligible)</option>
+          </select>
+          <div class="plan-desc-snippet">
+            ${plan.desc} ${plan.eligible ? '<span class="badge-eligible">• Qualifies for Multi-Line Discount</span>' : ''}
+          </div>
+        `;
+        container.appendChild(row);
+      });
+
+      document.getElementById("lineCountBadge").innerText = `${lines.length} of ${MAX_LINES} Lines`;
+      document.getElementById("btnAddLine").disabled = lines.length >= MAX_LINES;
+      recalculate();
+    }
+
+    function addLine() {
+      if (lines.length < MAX_LINES) {
+        lines.push("unlimited25");
+        renderLines();
+      }
+    }
+
+    function removeLine(index) {
+      if (lines.length > 1) {
+        lines.splice(index, 1);
+        renderLines();
+      }
+    }
+
+    function changePlan(index, newPlanKey) {
+      lines[index] = newPlanKey;
+      renderLines();
+      // keep keyboard focus on the dropdown the user just changed
+      const sel = document.getElementById(`planSelect${index}`);
+      if (sel) sel.focus();
+    }
+
+    function updateDevice(type, delta) {
+      if (type === "tablet") {
+        tabletQty = Math.max(0, tabletQty + delta);
+      } else if (type === "watch") {
+        watchQty = Math.max(0, watchQty + delta);
+      }
+      recalculate();
+    }
+
+    function resetCalculator() {
+      lines = ["unlimited25"];
+      tabletQty = 0;
+      watchQty = 0;
+      document.getElementById("promoToggle").checked = false;
+      renderLines();
+    }
+
+    function recalculate() {
+      let phoneSubtotal = 0;
+      let eligibleCount = 0;
+      let promoLineCount = 0;   // $25 Unlimited lines on the account
+      let promoPerLineSavings = 0;
+      const promoOn = document.getElementById("promoToggle").checked;
+
+      lines.forEach(planKey => {
+        const p = PLANS[planKey];
+        phoneSubtotal += p.price;
+        if (p.eligible) eligibleCount++;
+        if (p.promoPrice !== undefined) {
+          promoLineCount++;
+          promoPerLineSavings = p.price - p.promoPrice;
+        }
+      });
+      const promoAppliedLines = Math.min(promoLineCount, PROMO_LINE_LIMIT);
+      const promoSavings = promoAppliedLines * promoPerLineSavings;
+
+      const discount = MULTILINE_DISCOUNTS[Math.min(eligibleCount, MAX_LINES)] || 0;
+      const phoneNet = phoneSubtotal - discount;
+      const devicesSubtotal = (tabletQty * DEVICE_PRICES.tablet) + (watchQty * DEVICE_PRICES.watch);
+      const total = phoneNet + devicesSubtotal;
+
+      // Average covers phone service only — connected devices are excluded
+      const avgPerLine = phoneNet / lines.length;
+
+      // Device steppers
+      document.getElementById("tabletQty").innerText = tabletQty;
+      document.getElementById("watchQty").innerText = watchQty;
+      document.getElementById("tabletMinus").disabled = tabletQty === 0;
+      document.getElementById("watchMinus").disabled = watchQty === 0;
+
+      // Summary
+      document.getElementById("phoneSubtotalDisplay").innerText = money(phoneSubtotal);
+      document.getElementById("totalLinesCount").innerText = lines.length;
+      document.getElementById("eligibleCountDisplay").innerText = eligibleCount;
+      document.getElementById("discountDisplay").innerText = `-${money(discount)}`;
+
+      const deviceRow = document.getElementById("deviceSubtotalRow");
+      if (devicesSubtotal > 0) {
+        deviceRow.style.display = "flex";
+        document.getElementById("deviceSubtotalDisplay").innerText = `+${money(devicesSubtotal)}`;
+      } else {
+        deviceRow.style.display = "none";
+      }
+
+      document.getElementById("monthlyTotalDisplay").innerHTML = `${money(total)}<span>/mo</span>`;
+      document.getElementById("avgCostDisplay").innerText = `Average: ${money(avgPerLine)}/phone line`;
+      document.getElementById("avgSubDisplay").innerText = devicesSubtotal > 0
+        ? `Phone service only — connected devices (${money(devicesSubtotal)}) not included`
+        : "Phone service only, before connected devices";
+
+      // Intro promo callout
+      const callout = document.getElementById("promoCallout");
+      if (promoOn && promoSavings > 0) {
+        const promoTotal = total - promoSavings;
+        callout.style.display = "block";
+        document.getElementById("promoTotalDisplay").innerText = `${money(promoTotal)}/mo`;
+        const overLimit = promoLineCount - promoAppliedLines;
+        document.getElementById("promoNoteDisplay").innerText =
+          `$10 intro price on ${promoAppliedLines} of ${promoLineCount} $25 Unlimited line${promoLineCount === 1 ? "" : "s"}` +
+          (overLimit > 0 ? ` (limit ${PROMO_LINE_LIMIT}; ${overLimit} line${overLimit === 1 ? "" : "s"} stay${overLimit === 1 ? "s" : ""} at $25)` : "") +
+          `. Saves ${money(promoSavings)}/mo. Then ${money(total)}/mo from month 7.`;
+      } else if (promoOn) {
+        callout.style.display = "block";
+        document.getElementById("promoTotalDisplay").innerText = `${money(total)}/mo`;
+        document.getElementById("promoNoteDisplay").innerText =
+          "No $25 Unlimited lines selected — the intro price doesn't apply.";
+      } else {
+        callout.style.display = "none";
+      }
+    }
+
+    document.getElementById("btnAddLine").addEventListener("click", addLine);
+    document.getElementById("btnReset").addEventListener("click", resetCalculator);
+    document.getElementById("promoToggle").addEventListener("change", recalculate);
+
+    // Initial render
+    renderLines();
+  </script>
+
+
+</body></html>
